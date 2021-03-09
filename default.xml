@@ -14,8 +14,7 @@
       <linkfile src="target" dest="build/target" />
       <linkfile src="tools" dest="build/tools" />
     </project>
-  
-    <project name="linux-sunxi" path="kernel/allwinner/common" />
+
     <project path="kernel/firmware" remote="github" name="armbian/firmware.git" revision="88dd75506f11edd6b0d56d68d3b62cb7987aced8" clone-depth="1" />
   
 </manifest>
