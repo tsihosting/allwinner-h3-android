@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
+  <remote name="github" fetch="https://github.com/" />
+  <remote name="gitlab" fetch="https://gitlab.freedesktop.org/" />
   <remote name="aosp" fetch="https://android.googlesource.com/" review="https://android-review.googlesource.com/" />
   <default revision="refs/tags/android-4.4.4_r2" remote="aosp" sync-j="4" />
     
@@ -14,6 +16,6 @@
     </project>
   
     <project name="linux-sunxi" path="kernel/allwinner/common" />
-    <project path="kernel/firmware"         remote="github" name="armbian/firmware.git"       revision="88dd75506f11edd6b0d56d68d3b62cb7987aced8" clone-depth="1" />
+    <project path="kernel/firmware" remote="github" name="armbian/firmware.git" revision="88dd75506f11edd6b0d56d68d3b62cb7987aced8" clone-depth="1" />
   
 </manifest>
