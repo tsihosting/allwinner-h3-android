@@ -3,6 +3,16 @@
   <remote name="aosp" fetch="https://android.googlesource.com/" review="https://android-review.googlesource.com/" />
   <default revision="refs/tags/android-4.4.4_r2" remote="aosp" sync-j="4" />
     
+    <project path="build/make" name="platform/build" groups="pdk" >
+      <copyfile src="core/root.mk" dest="Makefile" />
+      <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+      <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+      <linkfile src="core" dest="build/core" />
+      <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+      <linkfile src="target" dest="build/target" />
+      <linkfile src="tools" dest="build/tools" />
+    </project>
+  
     <extend-project name="platform/external/arm-trusted-firmware" revision="de9d0d7c7ffc592e34f9c8c38c1971556d4d4de8" />
     <extend-project name="platform/external/libdrm" revision="d3505e46291b7ce7b5eb56544e7dfc0ec5de5540"/>
   
